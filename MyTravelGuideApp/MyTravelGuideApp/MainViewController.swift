@@ -88,12 +88,19 @@ class MainViewController: UIViewController {
         
         do {
             try CoreDataManager.shared.deletePlace(placeToDelete)
-            places.remove(at: index)
+            
+            if let originalIndex = places.firstIndex(where: { $0.id == placeToDelete.id }) {
+                places.remove(at: originalIndex)
+            }
+            
+            filteredPlaces.remove(at: index)
+            
             tableView.reloadData()
         } catch {
             showAlert(title: "Error", message: error.localizedDescription)
         }
     }
+
     
     // MARK: - Methods
     @objc private func addPlace() {

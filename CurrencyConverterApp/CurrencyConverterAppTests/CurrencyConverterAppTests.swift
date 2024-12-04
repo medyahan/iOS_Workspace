@@ -1,0 +1,17 @@
+//
+//  CurrencyConverterAppTests.swift
+//  CurrencyConverterAppTests
+//
+//  Created by Medya Han on 4.12.2024.
+//
+
+import Testing
+@testable import CurrencyConverterApp
+
+struct CurrencyConverterAppTests {
+
+    @Test func example() async throws {
+        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    }
+
+}
